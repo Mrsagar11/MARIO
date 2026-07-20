@@ -65,11 +65,11 @@ class Player:
         self.vel_x = 0
 
         if keys[pygame.K_LEFT]:
-            self.vel_x = PLAYER_SPEED
-            self.facing_right = True
-        if keys[pygame.K_RIGHT]:
             self.vel_x = -PLAYER_SPEED
             self.facing_right = False
+        if keys[pygame.K_RIGHT]:
+            self.vel_x = PLAYER_SPEED
+            self.facing_right = True
 
         if (keys[pygame.K_SPACE] or keys[pygame.K_UP]) and self.on_ground:
             self.vel_y = JUMP_STRENGTH
